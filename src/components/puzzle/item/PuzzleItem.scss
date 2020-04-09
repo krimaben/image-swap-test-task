@@ -1,0 +1,9 @@
+@import "../../../styles/variables";
+
+.puzzle-item {
+  border: 1px solid $white;
+
+  img {
+    max-width: 100%;
+  }
+}

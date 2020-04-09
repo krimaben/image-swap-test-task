@@ -1,0 +1,50 @@
+$yellow: #cca134;
+$blue: #47bdcc;
+
+.alert {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding: 30px 50px;
+  animation: opacityShow;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+  &.alert-info {
+    background-color: $blue;
+  }
+
+  &.alert-warning {
+    background-color: $yellow;
+  }
+}
+
+.alert-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityShow {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+
+  100% {
+    opacity: 0.8;
+    bottom: 0;
+  }
+}
